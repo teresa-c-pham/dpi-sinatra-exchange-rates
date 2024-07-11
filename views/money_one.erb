@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+
+  <body>
+    <h1>Convert <%=@money_one %></h1>
+    <div>
+      Go <a href="/">back</a>
+    </div>
+    <div>
+      <ul>
+      <% @currency.each do |money_two| %>
+        <li><a href="/<%= @money_one %>/<%= money_two[0] %>">Convert 1 <%= @money_one%> to <%= money_two[0] %>...</a></li>
+      <% end %>
+      </ul>
+    </div>
+  </body>
+</html>
